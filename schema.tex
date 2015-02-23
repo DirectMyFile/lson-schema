@@ -38,10 +38,7 @@ LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount
 {
   // Yes and no are first-class citizens in boolean values
   enabled: true,
-  confirm: yes,
-  // Boolean values are case-insensitive
-  property: YES,
-  property: Yes
+  confirm: yes
 }
 \end{lstlisting}
 
@@ -61,8 +58,9 @@ LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount
 \label{stringQuotesExample}
 \begin{lstlisting}
 {
-  /* Properties are not required to have quotes around the keys */
-  key: "value"
+  /* String value quotes are optional */
+  key1: "value",
+  key2: value
 }
 \end{lstlisting}
 
@@ -94,7 +92,7 @@ String keys and values are quote-optional.
 See example: \ref{stringQuotesExample}
 
 \subsection{Hexadecimal}
-Hexadecimal values are supported
+Hexadecimal values are usable in values.
 
 See example: \ref{hexExample}
 
