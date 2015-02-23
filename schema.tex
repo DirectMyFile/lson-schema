@@ -58,9 +58,10 @@ LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount
 \label{stringQuotesExample}
 \begin{lstlisting}
 {
-  /* String value quotes are optional */
+  /* String value quotes are optional and can be either single or double*/
   key1: "value",
-  key2: value
+  key2: 'value',
+  key3:  value
 }
 \end{lstlisting}
 
@@ -70,6 +71,18 @@ LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount
 {
   // Hexadecimal value
   hex: 0xdeadbeef
+}
+\end{lstlisting}
+
+\newpage
+
+\subsection{Keys}
+\label{keyExample}
+\begin{lstlisting}
+{
+  key1:   value,
+  'key2': value,
+  "key3": value
 }
 \end{lstlisting}
 
@@ -87,7 +100,7 @@ Multiple types of comments are featured in LSON. Single-line comments, multi-lin
 See example: \ref{commentsExample}
 
 \subsection{Strings}
-String keys and values are quote-optional.
+String values are quote-optional and can be used interchangeably with single or double quotes.
 
 See example: \ref{stringQuotesExample}
 
@@ -95,5 +108,10 @@ See example: \ref{stringQuotesExample}
 Hexadecimal values are usable in values.
 
 See example: \ref{hexExample}
+
+\subsection{Keys}
+Keys are quote-optional and can be used interchangeably with single or double quotes.
+
+See example: \ref{keyExample}
 
 \end{document}
