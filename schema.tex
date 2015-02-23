@@ -5,7 +5,7 @@
   colorlinks,
   citecolor=black,
   filecolor=black,
-  linkcolor=black,
+  linkcolor=blue,
   urlcolor=black
 }
 \renewcommand{\contentsname}{Table of Contents}
@@ -29,19 +29,21 @@
 LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount of changes that allow JSON to be used in a much  broader environment.
 
 \section{Examples}
-\subsection{Primitive value case}
+\subsection{Boolean primitive values}
+\label{booleanPrimValueExample}
 \begin{lstlisting}
 {
-  /* Yes and no are first-class citizens in boolean values */
+  // Yes and no are first-class citizens in boolean values
   enabled: true,
   confirm: yes,
-  /* Boolean values are also case-insensitive */
+  // Boolean values are case-insensitive
   property: YES,
   property: Yes
 }
 \end{lstlisting}
 
 \subsection{Comments}
+\label{commentsExample}
 \begin{lstlisting}
 {
   // Single-line comments
@@ -52,7 +54,8 @@ LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount
 }
 \end{lstlisting}
 
-\subsection{Property keys without quotes}
+\subsection{String quotes}
+\label{stringQuotesExample}
 \begin{lstlisting}
 {
   /* Properties are not required to have quotes around the keys */
@@ -60,13 +63,34 @@ LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount
 }
 \end{lstlisting}
 
-\section{Primitive values}
+\subsection{Hexadecimal}
+\label{hexExample}
+\begin{lstlisting}
+{
+  // Hexadecimal value
+  hex: 0xdeadbeef
+}
+\end{lstlisting}
+
+\section{Features}
 \subsection{Booleans}
-\begin{itemize}
-\item true
-\item false
-\item yes
-\item no
-\end{itemize}
+Booleans can also use yes/no primitive values that act as true/false values.
+
+See example: \ref{booleanPrimValueExample}
+
+\subsection{Comments}
+Multiple types of comments are featured in LSON. Single-line comments, multi-line comments, and bash-style comments are all supported.
+
+See example: \ref{commentsExample}
+
+\subsection{Strings}
+String keys and values are quote-optional.
+
+See example: \ref{stringQuotesExample}
+
+\subsection{Hexadecimal}
+Hexadecimal values are supported
+
+See example: \ref{hexExample}
 
 \end{document}
