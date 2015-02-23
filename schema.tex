@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{listings}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black
+}
+\renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\thepage}{\roman{page}}
+\renewcommand{\thepage}{\arabic{page}}
+
+\begin{document}
+
+\title{LSON Schema}
+\author{Logan Gorence \and Kenneth Endfinger}
+\date{February 2015}
+\maketitle
+\pagenumbering{Roman}
+\newpage
+
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+\section{Introduction}
+LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount of changes that allow JSON to be used in a much  broader environment.
+\section{Examples}
+\subsection{Variations in keywords}
+\begin{lstlisting}
+{
+  /* Yes and no are first-class citizens in boolean values */
+  enabled: true,
+  confirm: yes,
+  /* Boolean values are also case-insensitive */
+  property: YES,
+  property: Yes,
+  /* Null can also be nil or none */
+  test1: nil,
+  test2: none
+}
+\end{lstlisting}
+\subsection{Comments}
+\begin{lstlisting}
+{
+  /* Block comments are valid in LSON */
+}
+\end{lstlisting}
+\subsection{Property keys without quotes}
+\begin{lstlisting}
+{
+  /* Properties are not required to have quotes around the keys */
+  key: "value"
+}
+\end{lstlisting}
+\end{document}
