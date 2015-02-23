@@ -27,8 +27,9 @@
 \pagenumbering{arabic}
 \section{Introduction}
 LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount of changes that allow JSON to be used in a much  broader environment.
+
 \section{Examples}
-\subsection{Keyword case}
+\subsection{Primitive value case}
 \begin{lstlisting}
 {
   /* Yes and no are first-class citizens in boolean values */
@@ -39,6 +40,7 @@ LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount
   property: Yes
 }
 \end{lstlisting}
+
 \subsection{Comments}
 \begin{lstlisting}
 {
@@ -49,6 +51,7 @@ LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount
   # Bash style comments
 }
 \end{lstlisting}
+
 \subsection{Property keys without quotes}
 \begin{lstlisting}
 {
@@ -56,4 +59,14 @@ LSON(Laxed JSON) is a heavily modified subset of JSON. It includes a fair amount
   key: "value"
 }
 \end{lstlisting}
+
+\section{Primitive values}
+\subsection{Booleans}
+\begin{itemize}
+\item true
+\item false
+\item yes
+\item no
+\end{itemize}
+
 \end{document}
